@@ -756,7 +756,6 @@ input {
 
 .icon-checkbox {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  fill: #f4f4fd;
 }
 
 .checkbox-privacy {
