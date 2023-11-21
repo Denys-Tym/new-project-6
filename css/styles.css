@@ -288,6 +288,7 @@ input {
 .project-card:hover .project-card-text {
   transform: translateY(0%);
 }
+
 /* ===== Mobile screen  ===== */
 
 @media screen and (max-width: 767px) {
@@ -410,6 +411,7 @@ input {
 .feature-icon-container {
   display: none;
 }
+
 /* FEATURE MOBILE STYLE end */
 
 .mobile-menu-icon-list {
@@ -419,6 +421,7 @@ input {
 }
 
 /* ======= FOOTER MOBILE STYLES ======= */
+
 .footer {
   background-color: #2e2f42;
   width: 100%;
@@ -462,7 +465,6 @@ input {
 
 .footer-social-container {
   display: flex;
-
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -568,6 +570,7 @@ input {
 .icon-subscribe {
   margin-left: 16px;
 }
+
 /* ======= /FOOTER MOBILE STYLES ======= */
 
 /* ====== BACKDROP MOBILE STYLES======= */
@@ -578,18 +581,18 @@ input {
   height: 100%;
   top: 0;
   left: 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -641,13 +644,12 @@ input {
 .modal {
   position: absolute;
   width: 288px;
-  min-height: 632px;
+  /* height: 632px; */
   border-radius: 4px;
   background-color: #fcfcfc;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 2px rgba(0, 0, 0, 0.2);
@@ -765,7 +767,7 @@ input {
 
 .checkbox-privacy {
   display: inline-flex;
-  width: 16px;
+  min-width: 16px;
   height: 16px;
   margin-right: 8px;
   border-radius: 2px;
@@ -926,6 +928,16 @@ input {
     fill: #f4f4fd;
   }
   /* /MENU MOBILE */
+
+  /* Modal window */
+  .text-label-privacy {
+    display: flex;
+    align-items: center;
+  }
+  .text-privacy {
+    display: block;
+    /* /Modal window */
+  }
 }
 
 @media screen and (min-width: 320px) {
@@ -1093,6 +1105,7 @@ input {
   .modal {
     width: 408px;
     min-height: 584px;
+    padding: 72px 24px 24px 24px;
   }
 }
 
